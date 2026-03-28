@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>واصل ديليفري | منصة التجار والمندوبين</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-purple: #6c5ce7;
+            --dark-purple: #4834d4;
+            --soft-purple: #f1f0ff;
+            --white: #ffffff;
+            --bg-body: #f7f9fc;
+            --text-main: #2d3436;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* الهيدر العلوي */
+        .hero-section {
+            width: 100%;
+            background: linear-gradient(135deg, var(--dark-purple), var(--primary-purple));
+            color: white;
+            padding: 40px 20px 80px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 10px 30px rgba(108, 92, 231, 0.2);
+        }
+
+        .hero-section h1 { font-size: 1.8rem; margin-bottom: 5px; }
+        .hero-section p { opacity: 0.9; font-size: 1rem; }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            padding: 0 20px;
+            margin-top: -50px; /* لسحب البطاقات فوق الهيدر */
+        }
+
+        /* بطاقات قنوات التليجرام */
+        .channel-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(108, 92, 231, 0.1);
+            transition: 0.3s;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .channel-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-purple);
+            box-shadow: 0 12px 25px rgba(108, 92, 231, 0.1);
+        }
+
+        .channel-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .channel-info i {
+            font-size: 28px;
+            color: var(--primary-purple);
+            background: var(--soft-purple);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .channel-text h3 { font-size: 1rem; margin-bottom: 2px; }
+        .channel-text p { font-size: 0.85rem; color: #636e72; }
+
+        .btn-join {
+            background: var(--primary-purple);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        /* قسم المعلومات (الأزرار في الأسفل) */
+        .info-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .info-title {
+            font-size: 1.1rem;
+            color: var(--dark-purple);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .info-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* زرين في كل صف */
+            gap: 10px;
+        }
+
+        .info-btn {
+            background: var(--white);
+            padding: 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            border: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .info-btn:hover {
+            border-color: var(--primary-purple);
+            background: var(--soft-purple);
+        }
+
+        .info-btn.full-width {
+            grid-column: span 2; /* زر يأخذ العرض كاملاً */
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #b2bec3;
+            font-size: 0.8rem;
+        }
+
+        /* تعديلات الهاتف */
+        @media (max-width: 480px) {
+            .hero-section { padding: 40px 15px 70px; }
+            .hero-section h1 { font-size: 1.5rem; }
+            .info-buttons { grid-template-columns: 1fr; }
+            .info-btn.full-width { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <h1>منصة واصل للتجار 🏪</h1>
+        <p>اختر القناة المناسبة لنشاطك التجاري</p>
+    </div>
+
+    <div class="container">
+        
+        <a href="https://t.me/+Cd48V6897GQ0NzJk" class="channel-card" target="_blank">
+            <div class="channel-info">
+                <i class="fas fa-utensils"></i>
+                <div class="channel-text">
+                    <h3>قناة المطاعم</h3>
+                    <p>خاصة بأصحاب المطاعم والأكل</p>
+                </div>
+            </div>
+            <span class="btn-join">انضمام</span>
+        </a>
+
+        <a href="https://t.me/+E0XD84p42hozNjJk" class="channel-card" target="_blank">
+            <div class="channel-info">
+                <i class="fas fa-shopping-basket"></i>
+                <div class="channel-text">
+                    <h3>قناة البقالة</h3>
+                    <p>خاصة بالسوبر ماركت والمواد الغذائية</p>
+                </div>
+            </div>
+            <span class="btn-join">انضمام</span>
+        </a>
+
+        <a href="https://t.me/+RjRIYVcqU2tlZDA8" class="channel-card" target="_blank">
+            <div class="channel-info">
+                <i class="fas fa-store"></i>
+                <div class="channel-text">
+                    <h3>قناة المتاجر</h3>
+                    <p>خاصة بأصحاب المحلات والمتاجر المتنوعة</p>
+                </div>
+            </div>
+            <span class="btn-join">انضمام</span>
+        </a>
+
+        <div class="info-section">
+            <h2 class="info-title">روابط تهمك</h2>
+            <div class="info-buttons">
+                <a href="https://wa.me/213796443012" class="info-btn">
+                    <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                    واتساب الدعم
+                </a>
+                <a href="https://wasseldz.com/" class="info-btn">
+                    <i class="fas fa-globe" style="color: var(--primary-purple);"></i>
+                    الموقع الرسمي
+                </a>
+                <a href="http://facebook.com/wasseldz/" class="info-btn">
+                    <i class="fab fa-facebook" style="color: #1877F2;"></i>
+                    فيسبوك
+                </a>
+                <a href="http://instagram.com/wasselmarketdz/" class="info-btn">
+                    <i class="fab fa-instagram" style="color: #E4405F;"></i>
+                    انستغرام
+                </a>
+                <a href="https://t.me/+GrtsuCQZJvJlMmNk" class="info-btn full-width" style="border: 1px solid #0088cc; background: #e3f2fd;">
+                    <i class="fab fa-telegram-plane" style="color: #0088cc;"></i>
+                    قناة المندوبين (للتوصيل فقط)
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            جميع الحقوق محفوظة &copy; 2026 واصل ديليفري مان
+        </footer>
+    </div>
+
+</body>
+</html>
