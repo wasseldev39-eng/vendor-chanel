@@ -38,11 +38,22 @@
             width: 100%;
             background: linear-gradient(135deg, var(--dark-purple), var(--primary-purple));
             color: white;
-            padding: 40px 20px 80px;
+            padding: 40px 20px 90px; /* زدت البادينغ قليلاً ليعطي مساحة للوجو */
             text-align: center;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
             box-shadow: 0 10px 30px rgba(108, 92, 231, 0.2);
+        }
+
+        /* تنسيق اللوجو الجديد */
+        .logo {
+            width: 100px; /* يمكنك تكبير أو تصغير الحجم من هنا */
+            height: auto;
+            background: white;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .hero-section h1 { font-size: 1.8rem; margin-bottom: 5px; }
@@ -52,7 +63,7 @@
             width: 100%;
             max-width: 650px;
             padding: 0 20px;
-            margin-top: -50px; /* لسحب البطاقات فوق الهيدر */
+            margin-top: -50px;
         }
 
         /* بطاقات قنوات التليجرام */
@@ -107,7 +118,6 @@
             font-weight: bold;
         }
 
-        /* قسم المعلومات (الأزرار في الأسفل) */
         .info-section {
             margin-top: 30px;
             text-align: center;
@@ -122,7 +132,7 @@
 
         .info-buttons {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* زرين في كل صف */
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
         }
 
@@ -149,7 +159,7 @@
         }
 
         .info-btn.full-width {
-            grid-column: span 2; /* زر يأخذ العرض كاملاً */
+            grid-column: span 2;
         }
 
         footer {
@@ -159,18 +169,20 @@
             font-size: 0.8rem;
         }
 
-        /* تعديلات الهاتف */
         @media (max-width: 480px) {
-            .hero-section { padding: 40px 15px 70px; }
+            .hero-section { padding: 40px 15px 80px; }
             .hero-section h1 { font-size: 1.5rem; }
             .info-buttons { grid-template-columns: 1fr; }
             .info-btn.full-width { grid-column: span 1; }
+            .logo { width: 85px; } /* تصغير اللوجو قليلاً في الجوال */
         }
     </style>
 </head>
 <body>
 
     <div class="hero-section">
+        <img src="https://wasseldz.com/storage/app/public/business/2025-07-19-687bb1f5ee9c9.png" alt="Wassel Logo" class="logo">
+        
         <h1>منصة واصل للتجار 🏪</h1>
         <p>اختر القناة المناسبة لنشاطك التجاري</p>
     </div>
